@@ -1,0 +1,10 @@
+.item {
+    position: relative;
+}
+.price {
+    color:lightseagreen;
+}
+.item-footer {
+    position: absolute;
+    bottom: 0;
+}

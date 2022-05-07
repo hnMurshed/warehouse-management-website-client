@@ -1,0 +1,13 @@
+.carousel-content {
+    background-color: rgb(255, 255, 255, 0.7);
+    padding: 50px;
+    text-align: center;
+}
+
+.carousel-content h3 {
+    font-size: 24px;
+}
+.carousel-content h2 {
+    font-size: 48px;
+    margin: 15px 0;
+}

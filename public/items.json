@@ -6,7 +6,8 @@
         "description": "Organic Tomatoes on the Vine are a deep reddish color both on the exterior and interior. They actually grow in clusters four or five right on the vine. Tomatoes are one of the world's most popular fruits, used in salads, sandwiches, soups, pastas, and omelets along with many other dishes.",
         "price": 50,
         "quantity": 50,
-        "supplier": "Arman"
+        "supplier": "Arman",
+        "category": "begetable"
     },
     {
         "_id": 2,
@@ -15,7 +16,8 @@
         "description": "Bell peppers are botanically fruits, but are generally considered in culinary contexts to be vegetables. They contain a recessive gene that eliminates capsaicin, the compound responsible for the 'hotness' found in other peppers.",
         "price": 70,
         "quantity": 50,
-        "supplier": "Faisal"
+        "supplier": "Faisal",
+        "category": "begetable"
     },
     {
         "_id": 3,
@@ -24,7 +26,8 @@
         "description": "Carrots 1 medium carrot / 80g serving counts as 1 of 5 a day Eating plenty of fruit and vegetables is one of the most important dietary changes needed to improve your diet and health.",
         "price": 95,
         "quantity": 50,
-        "supplier": "Raihan"
+        "supplier": "Raihan",
+        "category": "begetable"
     },
     {
         "_id": 4,
@@ -33,7 +36,8 @@
         "description": "Eggplant is also known as aubergine. It is very common in southern European countries and is used in many traditional recipes; Greek - moussaka, French - ratatouille, Indian – baingan bharta, and Turkish - imam bayildi. It is actually a fruit, and contains many fine seeds. ",
         "price": 0,
         "quantity": 50,
-        "supplier": "Ridoan"
+        "supplier": "Ridoan",
+        "category": "begetable"
     },
     {
         "_id": 5,
@@ -42,7 +46,8 @@
         "description": "green cabbage can be eaten raw or it can go into stir-fries, soups, and braises. The whole leaves can also be used to make cabbage rolls. Raw leaves are somewhat peppery in flavor, but the cabbage gets sweeter as it cooks.",
         "price": 38,
         "quantity": 50,
-        "supplier": "Arman"
+        "supplier": "Arman",
+        "category": "begetable"
     },
     {
         "_id": 6,
@@ -51,7 +56,8 @@
         "description": "Ladyfingers are also called Okra or lady’s fingers or Bhindi, the plant and its seed seeds. It is a green vegetable and has many medicinal properties.",
         "price": 25,
         "quantity": 50,
-        "supplier": "Faisal"
+        "supplier": "Faisal",
+        "category": "begetable"
     },
     {
         "_id": 7,
@@ -60,7 +66,8 @@
         "description": "Kale contains fiber, antioxidants, calcium, vitamins C and K, iron, and a wide range of other nutrients that can help prevent various health problems. Antioxidants help the body remove unwanted toxins that result from natural processes and environmental pressures.",
         "price": 20,
         "quantity": 50,
-        "supplier": "Raihan"
+        "supplier": "Raihan",
+        "category": "begetable"
     },
     {
         "_id": 8,
@@ -69,7 +76,8 @@
         "description": "Shiitake mushrooms are traditionally added to miso soup or try sautéing mushrooms with onions and garlic. Mushrooms are very porous, so if they are exposed to too much water they will quickly absorb it and become soggy.",
         "price": 120,
         "quantity": 50,
-        "supplier": "Arman"
+        "supplier": "Arman",
+        "category": "begetable"
     },
     {
         "_id": 9,
@@ -78,7 +86,8 @@
         "description": "Garlic is widely used around the world for its pungent flavour as a seasoning or condiment. It is a fundamental component in many or most dishes of various regions, including eastern Asia, south Asia, Southeast Asia, the Middle East, northern Africa, southern Europe, and parts of South and Central America",
         "price": 27,
         "quantity": 50,
-        "supplier": "Faisal"
+        "supplier": "Faisal",
+        "category": "begetable"
     },
     {
         "_id": 10,
@@ -87,7 +96,8 @@
         "description": "Garlic is grown for its nutritious bulbs that contain 4 to 6 cloves and is used in many cooking recipes. It's one of the most important elements that make the meal so tasty",
         "price": 0,
         "quantity": 50,
-        "supplier": "Ridaon"
+        "supplier": "Ridaon",
+        "category": "begetable"
     },
     {
         "_id": 11,
@@ -96,7 +106,8 @@
         "description": "Health benefits for the body MerahPutih Sehat - Sweet and fresher sweet corn has become a favorite and is very delicious to be used as a meal.",
         "price": 210,
         "quantity": 50,
-        "supplier": "Arman"
+        "supplier": "Arman",
+        "category": "begetable"
     },
     {
         "_id": 12,
@@ -105,6 +116,7 @@
         "description": "White pumpkin is a general descriptor used to define several different varieties including Ghost pumpkins, Full Moon pumpkins, Luminas, Valenciano, Silver Moon, and Casper pumpkins.",
         "price": 34,
         "quantity": 50,
-        "supplier": "Raihan"
+        "supplier": "Raihan",
+        "category": "begetable"
     }
 ]
