@@ -1,0 +1,110 @@
+[
+    {
+        "_id": 1,
+        "name": "Organic Fresh Tomatoes",
+        "img": "https://i.ibb.co/ySCD0Dm/fresh-tomatoes.jpg",
+        "description": "Organic Tomatoes on the Vine are a deep reddish color both on the exterior and interior. They actually grow in clusters four or five right on the vine. Tomatoes are one of the world's most popular fruits, used in salads, sandwiches, soups, pastas, and omelets along with many other dishes.",
+        "price": 50,
+        "quantity": 50,
+        "supplier": "Arman"
+    },
+    {
+        "_id": 2,
+        "name": "Organic Bell Pepper",
+        "img": "https://i.ibb.co/X8f3pLk/Organic-Bell-Pepper.jpg",
+        "description": "Bell peppers are botanically fruits, but are generally considered in culinary contexts to be vegetables. They contain a recessive gene that eliminates capsaicin, the compound responsible for the 'hotness' found in other peppers.",
+        "price": 70,
+        "quantity": 50,
+        "supplier": "Faisal"
+    },
+    {
+        "_id": 3,
+        "name": "Sainsbury Carrots Loose",
+        "img": "https://i.ibb.co/jDcVvYn/Sainsbury-Carrots-Loose.jpg",
+        "description": "Carrots 1 medium carrot / 80g serving counts as 1 of 5 a day Eating plenty of fruit and vegetables is one of the most important dietary changes needed to improve your diet and health.",
+        "price": 95,
+        "quantity": 50,
+        "supplier": "Raihan"
+    },
+    {
+        "_id": 4,
+        "name": "Vegetable Eggplants",
+        "img": "https://i.ibb.co/VQwDC1P/vegetable-eggplants.jpg",
+        "description": "Eggplant is also known as aubergine. It is very common in southern European countries and is used in many traditional recipes; Greek - moussaka, French - ratatouille, Indian – baingan bharta, and Turkish - imam bayildi. It is actually a fruit, and contains many fine seeds. ",
+        "price": 0,
+        "quantity": 50,
+        "supplier": "Ridoan"
+    },
+    {
+        "_id": 5,
+        "name": "Green Cabbage",
+        "img": "https://i.ibb.co/X4zg731/green-cabbage.jpg",
+        "description": "green cabbage can be eaten raw or it can go into stir-fries, soups, and braises. The whole leaves can also be used to make cabbage rolls. Raw leaves are somewhat peppery in flavor, but the cabbage gets sweeter as it cooks.",
+        "price": 38,
+        "quantity": 50,
+        "supplier": "Arman"
+    },
+    {
+        "_id": 6,
+        "name": "Ladyfingers",
+        "img": "https://i.ibb.co/hHPjrKv/ladyfingers.jpg",
+        "description": "Ladyfingers are also called Okra or lady’s fingers or Bhindi, the plant and its seed seeds. It is a green vegetable and has many medicinal properties.",
+        "price": 25,
+        "quantity": 50,
+        "supplier": "Faisal"
+    },
+    {
+        "_id": 7,
+        "name": "Curly Kale",
+        "img": "https://i.ibb.co/3NxrZt2/curly-kale.jpg",
+        "description": "Kale contains fiber, antioxidants, calcium, vitamins C and K, iron, and a wide range of other nutrients that can help prevent various health problems. Antioxidants help the body remove unwanted toxins that result from natural processes and environmental pressures.",
+        "price": 20,
+        "quantity": 50,
+        "supplier": "Raihan"
+    },
+    {
+        "_id": 8,
+        "name": "Organic Shiitake Mushrooms",
+        "img": "https://i.ibb.co/z2tBTK6/Mushroom.jpg",
+        "description": "Shiitake mushrooms are traditionally added to miso soup or try sautéing mushrooms with onions and garlic. Mushrooms are very porous, so if they are exposed to too much water they will quickly absorb it and become soggy.",
+        "price": 120,
+        "quantity": 50,
+        "supplier": "Arman"
+    },
+    {
+        "_id": 9,
+        "name": "Organic Wild Garlic Leaves",
+        "img": "https://i.ibb.co/9HV61kQ/Organic-Wild-Garlic-Leaves.jpg",
+        "description": "Garlic is widely used around the world for its pungent flavour as a seasoning or condiment. It is a fundamental component in many or most dishes of various regions, including eastern Asia, south Asia, Southeast Asia, the Middle East, northern Africa, southern Europe, and parts of South and Central America",
+        "price": 27,
+        "quantity": 50,
+        "supplier": "Faisal"
+    },
+    {
+        "_id": 10,
+        "name": "Organic Garlic",
+        "img": "https://i.ibb.co/5c3SsHM/Organic-Garlic.jpg",
+        "description": "Garlic is grown for its nutritious bulbs that contain 4 to 6 cloves and is used in many cooking recipes. It's one of the most important elements that make the meal so tasty",
+        "price": 0,
+        "quantity": 50,
+        "supplier": "Ridaon"
+    },
+    {
+        "_id": 11,
+        "name": "Super Sweet Corn",
+        "img": "https://i.ibb.co/1nkZ9H9/super-sweet-corn.jpg",
+        "description": "Health benefits for the body MerahPutih Sehat - Sweet and fresher sweet corn has become a favorite and is very delicious to be used as a meal.",
+        "price": 210,
+        "quantity": 50,
+        "supplier": "Arman"
+    },
+    {
+        "_id": 12,
+        "name": "White Pumpkin",
+        "img": "https://i.ibb.co/LtzyZ2M/white-pumpkin.jpg",
+        "description": "White pumpkin is a general descriptor used to define several different varieties including Ghost pumpkins, Full Moon pumpkins, Luminas, Valenciano, Silver Moon, and Casper pumpkins.",
+        "price": 34,
+        "quantity": 50,
+        "supplier": "Raihan"
+    }
+]
