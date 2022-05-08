@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './Register.css';
-import registerBg from '../../images/register-bg.jpg';
+import registerBg from '../../../images/register-bg.jpg';
+import SocialButtons from '../SocialButtons/SocialButtons';
+import { Link } from 'react-router-dom';
 
 const style = {
     padding: '60px 0',
@@ -55,6 +57,11 @@ const Register = () => {
                 </form>
                 <div className='text-center my-3'>
                     <span className='fs-5 fw-bold'>or</span>
+                </div>
+                <SocialButtons></SocialButtons>
+                <div>
+                    <span className='me-2'>Already have an account?</span>
+                    <Link className='signinup-link text-primary' to='/login'>Please Signin</Link>
                 </div>
             </div>
         </div>

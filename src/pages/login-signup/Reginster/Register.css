@@ -1,5 +1,5 @@
 .register-box {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.7);
     width: 615px;
     padding: 50px 80px;
 }
@@ -33,7 +33,7 @@
 }
 .clicked {
     font-size: 18px;
-    transform: translateY(-15px);
+    transform: translateY(-10px);
 }
 .noclicked {
     font-size: 26px;
@@ -57,4 +57,13 @@
 }
 .input-submit:hover {
     border-radius: 30px;
+}
+.signinup-link {
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.2s;
+}
+.signinup-link:hover {
+    text-decoration: underline;
 }

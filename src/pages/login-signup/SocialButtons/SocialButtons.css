@@ -1,0 +1,10 @@
+.social-btn {
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: 1px solid black;
+    margin-bottom: 15px;
+    transition: 0.2s;
+}
+.social-btn:hover {
+    border-radius: 30px;
+}

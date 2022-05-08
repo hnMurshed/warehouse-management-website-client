@@ -7,8 +7,8 @@ import Inventory from './pages/Inventory/Inventory';
 import ManageInventories from './pages/ManageInvetories/ManageInventories';
 import AddItem from './pages/AddItem/AddItem';
 import { Toaster } from 'react-hot-toast';
-import Register from './pages/Reginster/Register';
-import Login from './pages/Login/Login';
+import Register from './pages/login-signup/Reginster/Register';
+import Login from './pages/login-signup/Login/Login';
 
 function App() {
   return (
