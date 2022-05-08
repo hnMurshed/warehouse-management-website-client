@@ -22,7 +22,7 @@ const Items = () => {
                 }
             </div>
             <div className='text-end mt-3'>
-                <Link className='link-btn' to='manageinventories'>Manage Inventories</Link>
+                <Link className='link-btn' to='/manageinventories'>Manage Inventories</Link>
             </div>
         </div>
     );

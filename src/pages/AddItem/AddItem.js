@@ -1,10 +1,28 @@
+import { async } from '@firebase/util';
+import axios from 'axios';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import toast from 'react-hot-toast';
 import './AddItem.css';
 
 const AddItem = () => {
     const { register, handleSubmit } = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = (data, event) => {
+        console.log(data);
+
+        const insertItem = async () => {
+            const response = await axios.post('http://localhost:5001/insertitem', data);
+
+            if (response.data.insertedId) {
+                toast.success('Your item is successfully added!');
+            }
+            console.log(response.data);
+        }
+        insertItem();
+
+        // clear fields
+        event.target.reset();
+    };
     return (
         <div className='container my-5'>
             <div className='form-container mx-auto'>

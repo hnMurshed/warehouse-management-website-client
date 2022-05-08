@@ -6,10 +6,12 @@ import Home from './pages/home/Home/Home';
 import Inventory from './pages/Inventory/Inventory';
 import ManageInventories from './pages/ManageInvetories/ManageInventories';
 import AddItem from './pages/AddItem/AddItem';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
     <div>
+      <Toaster></Toaster>
       <Header></Header>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>

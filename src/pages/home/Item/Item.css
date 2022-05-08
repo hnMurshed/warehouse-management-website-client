@@ -1,12 +1,17 @@
 .item {
-    position: relative;
+    /* min-height: 600px; */
 }
 .price {
     color:lightseagreen;
 }
-.item-footer {
+.relative {
+    position: relative;
+}
+.absolute {
     position: absolute;
-    bottom: 0;
+}
+.bottom-0 {
+    bottom: 0px;
 }
 .btn-update {
     background-color: lightseagreen;
@@ -14,4 +19,5 @@
     text-decoration: none;
     color: white;
     text-align: center;
+    overflow: hidden;
 }
