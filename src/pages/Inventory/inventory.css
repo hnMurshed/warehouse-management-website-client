@@ -11,3 +11,9 @@
     color: white;
     border-radius: 0;
 }
+.link-btn {
+    color: mediumorchid;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+}

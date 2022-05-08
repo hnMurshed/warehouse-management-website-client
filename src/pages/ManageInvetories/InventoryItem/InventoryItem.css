@@ -1,0 +1,9 @@
+.gap-10 {
+    gap: 10px;
+}
+.btn-add {
+    background-color: lightseagreen;
+    color: white;
+    padding: 10px 50px;
+    border: 0;
+}

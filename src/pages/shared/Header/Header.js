@@ -28,10 +28,10 @@ const Header = () => {
                             {
                                 <>
                                     <li className="nav-item">
-                                        <Link className="nav-link" to=''>Add Item</Link>
+                                        <Link className="nav-link" to='/additem'>Add Item</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link className="nav-link" to=''>Manage Items</Link>
+                                        <Link className="nav-link" to='/manageinventories'>Manage Inventories</Link>
                                     </li>
                                     <li className="nav-item">
                                         <Link className="nav-link" to=''>My Items</Link>

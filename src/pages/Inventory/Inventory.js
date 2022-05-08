@@ -2,7 +2,7 @@ import { async } from '@firebase/util';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import './inventory.css';
 
 const Inventory = () => {
@@ -31,7 +31,7 @@ const Inventory = () => {
         const changeQuantity = async () => {
             const { data } = await axios.put(`http://localhost:5001/increase-quanity?id=${itemId}&updatedquantity=${newQuantity}`);
             console.log(data);
-    
+
             if (data.modifiedCount === 1) {
                 getItem();
             }
@@ -47,7 +47,7 @@ const Inventory = () => {
         const changeQuantity = async () => {
             const { data } = await axios.put(`http://localhost:5001/increase-quanity?id=${itemId}&updatedquantity=${upadateQuantity}`);
             console.log(data);
-    
+
             if (data.modifiedCount === 1) {
                 getItem();
             }
@@ -78,6 +78,9 @@ const Inventory = () => {
                     <div className='d-flex align-items-center justify-content-between'>
                         <span>Supplier: {supplier}</span>
                         <span>SOLD</span>
+                    </div>
+                    <div className='text-end mt-3'>
+                        <Link className='link-btn' to='manageinventories'>Manage Inventories</Link>
                     </div>
                 </div>
             </div>
