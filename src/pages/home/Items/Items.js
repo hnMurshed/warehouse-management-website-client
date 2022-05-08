@@ -6,7 +6,7 @@ const Items = () => {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        fetch('https://glacial-taiga-42274.herokuapp.com/items')
+        fetch('http://localhost:5001/items')
             .then(res => res.json())
             .then(data => setItems(data))
     }, [])

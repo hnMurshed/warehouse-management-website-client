@@ -18,7 +18,7 @@ const Register = () => {
     console.log(activeCheck);
     return (
         <div style={style} className='d-flex align-items-center justify-content-center'>
-            <div className='register-box bg-white'>
+            <div className='register-box'>
                 <h2 className='text-center mb-4'>Sign Up</h2>
                 <form>
                     <div className="input-box border-normal">
@@ -46,7 +46,7 @@ const Register = () => {
                         </div>
                     </div>
                     <div>
-                        <input onClick={ () => setActiveCheck(!activeCheck)} className='me-2' type="checkbox" name="checkbox" id="checkbox" required />
+                        <input onClick={() => setActiveCheck(!activeCheck)} className='me-2' type="checkbox" name="checkbox" id="checkbox" required />
                         <label htmlFor="checkbox">I agree to <strong>Terms & Conditions</strong> and <strong>Privacy Policy</strong></label>
                     </div>
                     <div>
@@ -54,7 +54,7 @@ const Register = () => {
                     </div>
                 </form>
                 <div className='text-center my-3'>
-                    <span>or</span>
+                    <span className='fs-5 fw-bold'>or</span>
                 </div>
             </div>
         </div>

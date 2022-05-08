@@ -11,7 +11,7 @@ const ManageInventories = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('https://glacial-taiga-42274.herokuapp.com/items')
+        fetch('http://localhost:5001/items')
             .then(res => res.json())
             .then(data => setItems(data))
     }, []);
@@ -20,7 +20,7 @@ const ManageInventories = () => {
         const confirm = window.confirm('Are you sure you want to remove this item?');
 
         const deleteItem = async () => {
-            const response = await axios.delete(`https://glacial-taiga-42274.herokuapp.com/deleteitem/${id}`);
+            const response = await axios.delete(`http://localhost:5001/deleteitem/${id}`);
 
             if (response.data.deletedCount === 1) {
                 const remaining = items.filter(item => item._id !== id);

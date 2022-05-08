@@ -8,6 +8,7 @@ import ManageInventories from './pages/ManageInvetories/ManageInventories';
 import AddItem from './pages/AddItem/AddItem';
 import { Toaster } from 'react-hot-toast';
 import Register from './pages/Reginster/Register';
+import Login from './pages/Login/Login';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path='manageinventories' element={<ManageInventories></ManageInventories>}></Route>
         <Route path='additem' element={<AddItem />}></Route>
         <Route path='register' element={<Register></Register>}></Route>
+        <Route path='login' element={<Login></Login>}></Route>
       </Routes>
     </div>
   );
