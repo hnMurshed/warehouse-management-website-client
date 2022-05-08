@@ -1,12 +1,9 @@
 import React from 'react';
 import './InventoryItem.css';
 
-const InventoryItem = ({ item }) => {
+const InventoryItem = ({ item, handleRemove }) => {
     const { name, img, description, quantity, supplier, price, _id } = item;
 
-    const handleRemove = id => {
-
-    }
     return (
         <div className='d-flex align-items-center justify-content-between my-3 border'>
             <div className='d-flex align-items-center gap-10'>

@@ -15,7 +15,7 @@ const Item = ({ item }) => {
                 <p className='description mt-3'>{description.slice(0, 100)}...</p>
             </div>
             <div className=''>
-                <Link to={`inventory/${_id}`} className='btn-update w-100 py-2 border-0'>Update Stock</Link>
+                <Link to={`/inventory/${_id}`} className='btn-update w-100 py-2 border-0'>Update Stock</Link>
             </div>
         </div>
     );
