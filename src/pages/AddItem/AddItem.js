@@ -11,7 +11,7 @@ const AddItem = () => {
         console.log(data);
 
         const insertItem = async () => {
-            const response = await axios.post('http://localhost:5001/insertitem', data);
+            const response = await axios.post('https://glacial-taiga-42274.herokuapp.com/insertitem', data);
 
             if (response.data.insertedId) {
                 toast.success('Your item is successfully added!');

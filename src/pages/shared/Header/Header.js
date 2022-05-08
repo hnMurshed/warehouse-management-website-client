@@ -41,7 +41,7 @@ const Header = () => {
                         </ul>
                         <div>
                             {
-                                <Link to='/login' className='btn btn-login text-white'>Login</Link>
+                                <Link to='/register' className='btn btn-login text-white'>Login</Link>
                             }
                         </div>
                     </div>

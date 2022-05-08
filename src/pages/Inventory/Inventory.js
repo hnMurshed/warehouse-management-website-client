@@ -15,7 +15,7 @@ const Inventory = () => {
     const { register, handleSubmit } = useForm();
 
     const getItem = async () => {
-        const { data } = await axios.get(`http://localhost:5001/item/${itemId}`);
+        const { data } = await axios.get(`https://glacial-taiga-42274.herokuapp.com/item/${itemId}`);
         setItem(data);
         console.log(data);
     }
@@ -29,7 +29,7 @@ const Inventory = () => {
         const newQuantity = prevQuantity - 1;
 
         const changeQuantity = async () => {
-            const { data } = await axios.put(`http://localhost:5001/increase-quanity?id=${itemId}&updatedquantity=${newQuantity}`);
+            const { data } = await axios.put(`https://glacial-taiga-42274.herokuapp.com/increase-quanity?id=${itemId}&updatedquantity=${newQuantity}`);
             console.log(data);
 
             if (data.modifiedCount === 1) {
@@ -45,7 +45,7 @@ const Inventory = () => {
         const upadateQuantity = parseInt(quantity) + newQuantity;
 
         const changeQuantity = async () => {
-            const { data } = await axios.put(`http://localhost:5001/increase-quanity?id=${itemId}&updatedquantity=${upadateQuantity}`);
+            const { data } = await axios.put(`https://glacial-taiga-42274.herokuapp.com/increase-quanity?id=${itemId}&updatedquantity=${upadateQuantity}`);
             console.log(data);
 
             if (data.modifiedCount === 1) {
