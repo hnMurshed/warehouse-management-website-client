@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Item.css';
 
 const Item = ({ item }) => {
-    const { name, img, description, quantity, supplier, price } = item;
+    const { name, img, description, quantity, supplier, price, _id } = item;
     return (
         <div className='item col'>
             <img className='w-100' src={img} alt="" />
@@ -14,7 +15,7 @@ const Item = ({ item }) => {
                     <span><strong>Supplier: </strong>{supplier}</span>
                     <span><strong>Quantity: </strong>{quantity}kg</span>
                 </div>
-                <button className='btn-update w-100 py-2 border-0'>Update Stock</button>
+                <Link to={`inventory/${_id}`} className='btn-update w-100 py-2 border-0'>Update Stock</Link>
             </div>
         </div>
     );

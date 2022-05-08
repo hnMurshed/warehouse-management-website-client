@@ -3,6 +3,7 @@ import './App.css';
 import Header from './pages/shared/Header/Header';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/home/Home/Home';
+import Inventory from './pages/Inventory/Inventory';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='home' element={<Home></Home>}></Route>
+        <Route path='inventory/:itemId' element={<Inventory></Inventory>}></Route>
       </Routes>
     </div>
   );
