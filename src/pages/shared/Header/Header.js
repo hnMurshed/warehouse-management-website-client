@@ -36,7 +36,7 @@ const Header = () => {
                                 <CustomLink className="nav-link" to='/blogs'>Blogs</CustomLink>
                             </li>
                             {
-                                <>
+                                user && <>
                                     <li className="nav-item">
                                         <CustomLink className="nav-link" to='/additem'>Add Item</CustomLink>
                                     </li>

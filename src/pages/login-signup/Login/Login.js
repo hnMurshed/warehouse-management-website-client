@@ -1,5 +1,7 @@
+import { async } from '@firebase/util';
 import React, { useEffect, useState } from 'react';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import toast from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import registerBg from '../../../images/register-bg.jpg';
@@ -37,11 +39,12 @@ const Login = () => {
         loading,
         error,
       ] = useSignInWithEmailAndPassword(auth);
+    const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
 
     // react built-in hooks
     const navigate = useNavigate();
     const location = useLocation();
-    const from = location.state?.from?.pathname || '/';
+    let from = location.state?.from?.pathname || "/";
 
     let errorElement;
     if (error) {
@@ -82,7 +85,10 @@ const Login = () => {
                     </div>
                     <div className='mb-4'>
                         <span className='me-2'>Forgot your password?</span>
-                        <span className='signinup-link text-primary' to='/register'>Please reset</span>
+                        <span onClick={ async () => {
+                            await sendPasswordResetEmail(email)
+                            toast.success('An email sent to you, please check!')
+                        }} className='signinup-link text-primary'>Please reset</span>
                     </div>
                     {errorElement}
                     <div>

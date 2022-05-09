@@ -12,14 +12,15 @@
     cursor: text;
     margin-bottom: 30px;
 }
-.border-normal {
+.input-normal {
     border-bottom: 5px solid black;
 }
-.border-succes {
+.input-success {
     border-bottom: 5px solid lightseagreen;
 }
-.border-error {
+.input-error {
     border-bottom: 5px solid lightcoral;
+    color: lightcoral;
 }
 .input-box label {
     width: 100%;

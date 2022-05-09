@@ -3,7 +3,7 @@ import './Register.css';
 import registerBg from '../../../images/register-bg.jpg';
 import SocialButtons from '../SocialButtons/SocialButtons';
 import { Link, useNavigate } from 'react-router-dom';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSendEmailVerification } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import Loading from '../../shared/Loading/Loading';
 
@@ -20,6 +20,7 @@ const Register = () => {
     const [passClicked, setPassClicked] = useState(false);
     const [confPassClicked, setConfPassClicked] = useState(false);
     const [activeCheck, setActiveCheck] = useState(false);
+    const [passMatched, setPassMatched] = useState(true);
 
     // get input values
     const [name, setName] = useState('');
@@ -48,12 +49,13 @@ const Register = () => {
     const navigate = useNavigate();
 
     // use react firebase hooks
+    const [sendEmailVerification] = useSendEmailVerification(auth);
     const [
         createUserWithEmailAndPassword,
         user,
         loading,
         error,
-      ] = useCreateUserWithEmailAndPassword(auth);
+      ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification });
 
     useEffect( () => {
         if (user) {
@@ -73,9 +75,11 @@ const Register = () => {
     const handleRegister = e => {
         e.preventDefault();
 
-        console.log(name, email, password, confPassword);
+        if (password !== confPassword) {
+            setPassMatched(false);
+            return;
+        }
         createUserWithEmailAndPassword(email, password);
-
 
     }
     return (
@@ -95,18 +99,19 @@ const Register = () => {
                             <input onClick={() => setEmailClicked(true)} onBlur={emailOnBlur} type="email" name="email" id="email" />
                         </div>
                     </div>
-                    <div className="input-box border-normal">
+                    <div className={`input-box ${passMatched ? 'input-normal' : 'input-error'}`}>
                         <div className='w-100 relative'>
                             <label className={`${passClicked || password ? 'clicked' : 'noclicked'}`} htmlFor="password">New Password*</label>
                             <input onClick={() => setPassClicked(true)} onBlur={passwordOnBlur} type="password" name="password" id="password" />
                         </div>
                     </div>
-                    <div className="input-box border-normal">
+                    <div className={`input-box ${passMatched ? 'input-normal' : 'input-error'}`}>
                         <div className='w-100 relative'>
                             <label className={`${confPassClicked || confPassword ? 'clicked' : 'noclicked'}`} htmlFor="confPassword">Confirm Password*</label>
                             <input onClick={() => setConfPassClicked(true)} onBlur={confPasswordOnBlur} type="password" name="confPassword" id="confPassword" />
                         </div>
                     </div>
+                    <p className={`text-danger mb-4 fs-5 ${passMatched ? 'd-none' : 'd-block'}`}>Password din't match</p>
                     <div>
                         <input onClick={() => setActiveCheck(!activeCheck)} className='me-2' type="checkbox" name="checkbox" id="checkbox" required />
                         <label htmlFor="checkbox">I agree to <strong>Terms & Conditions</strong> and <strong>Privacy Policy</strong></label>

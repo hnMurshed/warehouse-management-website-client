@@ -10,10 +10,10 @@ const Items = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('https://glacial-taiga-42274.herokuapp.com/items')
+        fetch('https://glacial-taiga-42274.herokuapp.com/items?page=0&count=6')
             .then(res => res.json())
             .then(data => setItems(data))
-    }, [])
+    }, []);
     return (
         <div className='container py-5'>
             <h2 className='text-center'>Our Items</h2>

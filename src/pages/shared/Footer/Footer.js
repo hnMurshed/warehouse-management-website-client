@@ -8,7 +8,7 @@ import facebook from '../../../images/icons/facebook-logo.png';
 const Footer = () => {
     return (
         <div className='bg-black text-white py-5'>
-            <div className="container d-flex justify-content-between">
+            <div className="container d-flex flex-column flex-md-row justify-content-between">
                 <div>
                     <h3>Vegetable House</h3>
                     <hr />

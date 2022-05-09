@@ -1,6 +1,6 @@
 import React from 'react';
 import { useAuthState, useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useLocation } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import googleLogo from '../../../images/icons/google-logo.png';
 import Loading from '../../shared/Loading/Loading';
@@ -9,6 +9,9 @@ import './SocialButtons.css';
 const SocialButtons = () => {
     const [signInWithGithub, user1, loading1, error1] = useSignInWithGithub(auth);
     const [signInWithGoogle, user2, loading2, error2] = useSignInWithGoogle(auth);
+
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
 
     if (loading1 || loading2) {
         return <Loading></Loading>
@@ -20,7 +23,7 @@ const SocialButtons = () => {
     }
 
     if (user1 || user2) {
-        return <Navigate to='/home'></Navigate>
+        return <Navigate to={from} replace={true}></Navigate>
     }
     return (
         <div>
