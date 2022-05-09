@@ -18,19 +18,21 @@ const items = [
 
 const OrganicVegetables = () => {
     return (
-        <div className='container mx-auto py-5' style={{backgroundColor: 'rgba(211, 211, 211, 0.3)'}}>
-            <h2 className='text-center mb-3'>100% Organic Vegetables</h2>
-            <div className="vege-containter">
-                {
-                    items.map(item => <div
-                        key={item.id}
-                        className='text-center'
-                    >
-                        <img style={{ borderRadius: '50%' }} className='w-100' src={item.img} alt={item.name} />
-                        <h3 className='mt-3'>{item.name}</h3>
-                        <p>{item.text}</p>
-                    </div>)
-                }
+        <div className='py-5' style={{ backgroundColor: 'rgba(211, 211, 211, 0.3)' }}>
+            <div className="container">
+                <h2 className='text-center mb-3'>100% Organic Vegetables</h2>
+                <div className="vege-containter">
+                    {
+                        items.map(item => <div
+                            key={item.id}
+                            className='text-center'
+                        >
+                            <img style={{ borderRadius: '50%' }} className='w-100' src={item.img} alt={item.name} />
+                            <h3 className='mt-3'>{item.name}</h3>
+                            <p>{item.text}</p>
+                        </div>)
+                    }
+                </div>
             </div>
         </div>
     );

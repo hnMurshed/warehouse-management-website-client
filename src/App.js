@@ -11,6 +11,7 @@ import Register from './pages/login-signup/Reginster/Register';
 import Login from './pages/login-signup/Login/Login';
 import PrivatePage from './pages/shared/PrivatePage/PrivatePage';
 import NotFound from './pages/NotFound/NotFound';
+import Footer from './pages/shared/Footer/Footer';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path='login' element={<Login></Login>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }

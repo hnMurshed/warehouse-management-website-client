@@ -1,0 +1,26 @@
+.newsletter {
+    width: 50%;
+}
+.newsletter input {
+    height: 80px;
+    border: none;
+    font-size: 24px;
+}
+
+@media only screen and (max-width: 912px) {
+    .newsletter {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .newsletter {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .newsletter {
+        width: 100%;
+    }
+}

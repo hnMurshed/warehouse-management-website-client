@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faClose } from '@fortawesome/free-solid-svg-icons'
+import { faClose } from '@fortawesome/free-solid-svg-icons';
 import './Header.css';
 import auth from '../../../firebase.init';
 import { signOut } from 'firebase/auth';
@@ -30,10 +30,10 @@ const Header = () => {
                                 <CustomLink to='/' className="nav-link active" aria-current="page">Home</CustomLink>
                             </li>
                             <li className="nav-item">
-                                <CustomLink className="nav-link" to='all-items'>All Items</CustomLink>
+                                <CustomLink className="nav-link" to='/all-items'>All Items</CustomLink>
                             </li>
                             <li className="nav-item">
-                                <CustomLink className="nav-link" to='blogs'>Blogs</CustomLink>
+                                <CustomLink className="nav-link" to='/blogs'>Blogs</CustomLink>
                             </li>
                             {
                                 <>
@@ -44,7 +44,7 @@ const Header = () => {
                                         <CustomLink className="nav-link" to='/manageinventories'>Manage Inventories</CustomLink>
                                     </li>
                                     <li className="nav-item">
-                                        <CustomLink className="nav-link" to='my-items'>My Items</CustomLink>
+                                        <CustomLink className="nav-link" to='/my-items'>My Items</CustomLink>
                                     </li>
                                 </>
                             }
