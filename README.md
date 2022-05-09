@@ -2,6 +2,14 @@
 
 (https://vegetable-house-by-murshedul.web.app/)
 
+# What I have done in this project
+
+* Navbar, banner, items, footer, others in home page
+* Implemented CRUD operations
+* Firebase login signup with emmai-pass, google, and github
+* bootstrap spinner for loading
+* Private page
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
