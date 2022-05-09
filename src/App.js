@@ -10,6 +10,7 @@ import { Toaster } from 'react-hot-toast';
 import Register from './pages/login-signup/Reginster/Register';
 import Login from './pages/login-signup/Login/Login';
 import PrivatePage from './pages/shared/PrivatePage/PrivatePage';
+import NotFound from './pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path='additem' element={<AddItem />}></Route>
         <Route path='register' element={<Register></Register>}></Route>
         <Route path='login' element={<Login></Login>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>
   );
