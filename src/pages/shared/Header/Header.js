@@ -5,13 +5,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee, faClose } from '@fortawesome/free-solid-svg-icons'
 import './Header.css';
 import auth from '../../../firebase.init';
+import { signOut } from 'firebase/auth';
 
 const Header = () => {
     const [showProfile, setShowProfile] = useState(false);
     const [user, loading, error] = useAuthState(auth);
 
     const handleSignout = () => {
-
+        signOut(auth);
     }
 
     return (

@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { Link, useNavigate } from 'react-router-dom';
+import auth from '../../../firebase.init';
 import registerBg from '../../../images/register-bg.jpg';
 import SocialButtons from '../SocialButtons/SocialButtons';
 
@@ -13,27 +15,73 @@ const style = {
 const Login = () => {
     const [emailClicked, setEmailClicked] = useState(false);
     const [passClicked, setPassClicked] = useState(false);
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    // get email and password
+    const emailOnBlur = e => {
+        setEmailClicked(false);
+        setEmail(e.target.value);
+    }
+    const passwordOnBlur = e => {
+        setPassClicked(false);
+        setPassword(e.target.value);
+    }
+
+    // use react firebase hooks
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+      ] = useSignInWithEmailAndPassword(auth);
+
+    // react built-in hooks
+    const navigate = useNavigate();
+
+    if (loading) {
+
+    }
+
+    let errorElement;
+    if (error) {
+        errorElement = <p className='text-danger'>{error.message}</p>
+    }
+
+    useEffect( () => {
+        if (user) {
+            navigate('/home');
+        }
+    }, [user]);
+
+    const handleLogin = event => {
+        event.preventDefault();
+        
+        signInWithEmailAndPassword(email, password);
+    }
     return (
         <div style={style} className='d-flex align-items-center justify-content-center'>
             <div className='register-box'>
                 <h2 className='text-center mb-4'>Login</h2>
-                <form>
+                <form onSubmit={handleLogin}>
                     <div className="input-box border-normal">
                         <div className='w-100 relative'>
-                            <label className={`${emailClicked ? 'clicked' : 'noclicked'}`} htmlFor="email">Your Email*</label>
-                            <input onClick={() => setEmailClicked(true)} onBlur={() => setEmailClicked(false)} type="email" name="email" id="email" />
+                            <label className={`${emailClicked || email ? 'clicked' : 'noclicked'}`} htmlFor="email">Your Email*</label>
+                            <input onClick={() => setEmailClicked(true)} onBlur={emailOnBlur} type="email" name="email" id="email" />
                         </div>
                     </div>
                     <div className="input-box border-normal mb-1">
                         <div className='w-100 relative'>
-                            <label className={`${passClicked ? 'clicked' : 'noclicked'}`} htmlFor="password">Your Password*</label>
-                            <input onClick={() => setPassClicked(true)} onBlur={() => setPassClicked(false)} type="password" name="password" id="password" />
+                            <label className={`${passClicked || password ? 'clicked' : 'noclicked'}`} htmlFor="password">Your Password*</label>
+                            <input onClick={() => setPassClicked(true)} onBlur={passwordOnBlur} type="password" name="password" id="password" />
                         </div>
                     </div>
                     <div className='mb-4'>
                         <span className='me-2'>Forgot your password?</span>
                         <span className='signinup-link text-primary' to='/register'>Please reset</span>
                     </div>
+                    {errorElement}
                     <div>
                         <input className='input-submit w-100 py-3 mt-1' type="submit" value="Login Your Account" />
                     </div>

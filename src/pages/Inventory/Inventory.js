@@ -2,6 +2,7 @@ import { async } from '@firebase/util';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import toast from 'react-hot-toast';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import './inventory.css';
 
@@ -15,7 +16,7 @@ const Inventory = () => {
     const { register, handleSubmit } = useForm();
 
     const getItem = async () => {
-        const { data } = await axios.get(`http://localhost:5001/item/${itemId}`);
+        const { data } = await axios.get(`https://glacial-taiga-42274.herokuapp.com/item/${itemId}`);
         setItem(data);
         console.log(data);
     }
@@ -29,10 +30,11 @@ const Inventory = () => {
         const newQuantity = prevQuantity - 1;
 
         const changeQuantity = async () => {
-            const { data } = await axios.put(`http://localhost:5001/increase-quanity?id=${itemId}&updatedquantity=${newQuantity}`);
+            const { data } = await axios.put(`https://glacial-taiga-42274.herokuapp.com/increase-quanity?id=${itemId}&updatedquantity=${newQuantity}`);
             console.log(data);
 
             if (data.modifiedCount === 1) {
+                toast.success('Successfully delivered!');
                 getItem();
             }
         }
@@ -45,10 +47,11 @@ const Inventory = () => {
         const upadateQuantity = parseInt(quantity) + newQuantity;
 
         const changeQuantity = async () => {
-            const { data } = await axios.put(`http://localhost:5001/increase-quanity?id=${itemId}&updatedquantity=${upadateQuantity}`);
+            const { data } = await axios.put(`https://glacial-taiga-42274.herokuapp.com/increase-quanity?id=${itemId}&updatedquantity=${upadateQuantity}`);
             console.log(data);
 
             if (data.modifiedCount === 1) {
+                toast.success('Stock imported successfully!');
                 getItem();
             }
         }
