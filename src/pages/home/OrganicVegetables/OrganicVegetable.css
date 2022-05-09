@@ -1,0 +1,6 @@
+.vege-containter {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    /* color:rgba(211, 211, 211, 0.5) */
+}
