@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import registerBg from '../../../images/register-bg.jpg';
+import Loading from '../../shared/Loading/Loading';
 import SocialButtons from '../SocialButtons/SocialButtons';
 
 const style = {
@@ -39,10 +40,8 @@ const Login = () => {
 
     // react built-in hooks
     const navigate = useNavigate();
-
-    if (loading) {
-
-    }
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
 
     let errorElement;
     if (error) {
@@ -51,9 +50,13 @@ const Login = () => {
 
     useEffect( () => {
         if (user) {
-            navigate('/home');
+            navigate(from, {replace: true});
         }
     }, [user]);
+
+    if (loading) {
+        return <Loading></Loading>
+    }
 
     const handleLogin = event => {
         event.preventDefault();

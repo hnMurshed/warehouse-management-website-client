@@ -5,6 +5,7 @@ import SocialButtons from '../SocialButtons/SocialButtons';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
+import Loading from '../../shared/Loading/Loading';
 
 const style = {
     padding: '60px 0',
@@ -66,7 +67,7 @@ const Register = () => {
     }
 
     if (loading) {
-        return 'Loooaaading...'
+        return <Loading></Loading>
     }
 
     const handleRegister = e => {

@@ -9,6 +9,7 @@ import AddItem from './pages/AddItem/AddItem';
 import { Toaster } from 'react-hot-toast';
 import Register from './pages/login-signup/Reginster/Register';
 import Login from './pages/login-signup/Login/Login';
+import PrivatePage from './pages/shared/PrivatePage/PrivatePage';
 
 function App() {
   return (
@@ -18,7 +19,11 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='home' element={<Home></Home>}></Route>
-        <Route path='inventory/:itemId' element={<Inventory></Inventory>}></Route>
+        <Route path='inventory/:itemId' element={
+          <PrivatePage>
+            <Inventory></Inventory>
+          </PrivatePage>
+        }></Route>
         <Route path='manageinventories' element={<ManageInventories></ManageInventories>}></Route>
         <Route path='additem' element={<AddItem />}></Route>
         <Route path='register' element={<Register></Register>}></Route>
