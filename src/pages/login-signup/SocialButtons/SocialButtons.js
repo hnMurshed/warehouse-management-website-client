@@ -1,17 +1,26 @@
 import React from 'react';
 import { useAuthState, useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { Navigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import googleLogo from '../../../images/icons/google-logo.png';
+import Loading from '../../shared/Loading/Loading';
 import './SocialButtons.css';
 
 const SocialButtons = () => {
     const [signInWithGithub, user1, loading1, error1] = useSignInWithGithub(auth);
     const [signInWithGoogle, user2, loading2, error2] = useSignInWithGoogle(auth);
 
+    if (loading1 || loading2) {
+        return <Loading></Loading>
+    }
+
     let errorMessage = '';
     if (error1 || error2) {
         errorMessage = <p className='text-danger'>{error1?.message || error2?.message}</p>
-        console.log(errorMessage);
+    }
+
+    if (user1 || user2) {
+        return <Navigate to='/home'></Navigate>
     }
     return (
         <div>

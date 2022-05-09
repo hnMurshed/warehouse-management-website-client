@@ -1,0 +1,7 @@
+.custom-link {
+    color: rgb(255, 255, 255, 0.7);
+}
+.custom-link:hover {
+    color: white;
+    border-bottom: 2px solid white;
+}

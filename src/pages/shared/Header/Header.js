@@ -6,6 +6,7 @@ import { faCoffee, faClose } from '@fortawesome/free-solid-svg-icons'
 import './Header.css';
 import auth from '../../../firebase.init';
 import { signOut } from 'firebase/auth';
+import CustomLink from '../CustomLink/CustomLink';
 
 const Header = () => {
     const [showProfile, setShowProfile] = useState(false);
@@ -24,26 +25,26 @@ const Header = () => {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className={`collapse navbar-collapse`} id="navbarSupportedContent">
-                        <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <ul className="navbar-nav mx-auto mb-2 mb-lg-0 gap-15px">
                             <li className="nav-item">
-                                <Link to='/' className="nav-link active" aria-current="page">Home</Link>
+                                <CustomLink to='/' className="nav-link active" aria-current="page">Home</CustomLink>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to=''>All Items</Link>
+                                <CustomLink className="nav-link" to='all-items'>All Items</CustomLink>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to=''>Blogs</Link>
+                                <CustomLink className="nav-link" to='blogs'>Blogs</CustomLink>
                             </li>
                             {
                                 <>
                                     <li className="nav-item">
-                                        <Link className="nav-link" to='/additem'>Add Item</Link>
+                                        <CustomLink className="nav-link" to='/additem'>Add Item</CustomLink>
                                     </li>
                                     <li className="nav-item">
-                                        <Link className="nav-link" to='/manageinventories'>Manage Inventories</Link>
+                                        <CustomLink className="nav-link" to='/manageinventories'>Manage Inventories</CustomLink>
                                     </li>
                                     <li className="nav-item">
-                                        <Link className="nav-link" to=''>My Items</Link>
+                                        <CustomLink className="nav-link" to='my-items'>My Items</CustomLink>
                                     </li>
                                 </>
                             }
