@@ -13,6 +13,7 @@ import PrivatePage from './pages/shared/PrivatePage/PrivatePage';
 import NotFound from './pages/NotFound/NotFound';
 import Footer from './pages/shared/Footer/Footer';
 import ItemsAll from './pages/ItemsAll/ItemsAll';
+import Blogs from './pages/Blogs/Blogs';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path='register' element={<Register></Register>}></Route>
         <Route path='login' element={<Login></Login>}></Route>
         <Route path='all-items' element={<ItemsAll></ItemsAll>}></Route>
+        <Route path='blogs' element={<Blogs></Blogs>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
