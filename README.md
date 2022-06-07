@@ -2,6 +2,12 @@
 
 (https://vegetable-house-by-murshedul.web.app/)
 
+# Key Features
+
+* Developed as an inventory management website for an online vegetable seller. 
+* Incorporated with managing inventories, adding new items, updating stock, delivering ordered stock, and sign in/up/out system.
+* Used technologies: HTML, CSS, JavaScript, React, Bootstrap, Firebase, Axios, React hook form, NodeJs, Express, MongoDB, etc.
+
 # What I have done in this project
 
 * Navbar, banner, items, footer, others in home page

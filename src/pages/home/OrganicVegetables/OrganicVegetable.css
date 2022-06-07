@@ -4,3 +4,9 @@
     gap: 40px;
     /* color:rgba(211, 211, 211, 0.5) */
 }
+
+@media only screen and (max-width: 768px) {
+    .vege-containter {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

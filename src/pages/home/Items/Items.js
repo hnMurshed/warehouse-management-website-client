@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Item from '../Item/Item';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import auth from '../../../firebase.init';
 
 const Items = () => {
     const [items, setItems] = useState([]);
 
     const navigate = useNavigate();
+    const [user] = useAuthState(auth);
 
     useEffect(() => {
         fetch('https://glacial-taiga-42274.herokuapp.com/items?page=0&count=6')
@@ -27,7 +30,7 @@ const Items = () => {
             </div>
             <div className='d-flex align-items-center justify-content-center mt-3'>
                 <button onClick={ () => navigate('/all-items')} className='btn btn-primary px-5 me-2'>View All</button>
-                <Link className='link-btn m-0' to='/manageinventories'>
+                <Link className={`link-btn m-0 ${user ? 'd-block' : 'd-none'}`} to='/manageinventories'>
                     <span className='me-2'>Manage Inventories</span>
                     <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon>
                 </Link>

@@ -25,7 +25,7 @@ const Inventory = () => {
         getItem();
     }, [])
 
-    const handleDelivered = () => {
+    const handleDelivered = id => {
         const prevQuantity = parseInt(quantity);
         const newQuantity = prevQuantity - 1;
 
@@ -38,7 +38,6 @@ const Inventory = () => {
                 getItem();
             }
         }
-
         changeQuantity();
     }
 
@@ -70,7 +69,7 @@ const Inventory = () => {
                     <h2>{name}</h2>
                     <p>${price}</p>
                     <p>Quantity: {quantity}kg</p>
-                    <button onClick={handleDelivered} className='btn-delivered w-100 py-2 mb-2'>Delivered</button>
+                    <button onClick={() => handleDelivered(_id)} className='btn-delivered w-100 py-2 mb-2'>Delivered</button>
                     <form onSubmit={handleSubmit(onSubmit)} className='d-flex'>
                         <input className='w-100 p-2 rounded-0' type="number" placeholder='Quantity you want to stock' {...register("quantity", { required: true })} />
                         <input className='btn-import py-2' type="submit" value='Import Stock' />
