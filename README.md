@@ -10,11 +10,15 @@
 
 # What I have done in this project
 
-* Navbar, banner, items, footer, others in home page
+* Navbar, banner, items, footer, others on home page
+* Displayed all products on allproduct page
+* Displayed all product on manage products page to manage products
 * Implemented CRUD operations
 * Firebase login signup with emmai-pass, google, and github
 * bootstrap spinner for loading
-* Private page
+* RequirAuth
+
+[View server side codes](https://github.com/hnMurshed/vegetable-house-server)
 
 # Getting Started with Create React App
 
